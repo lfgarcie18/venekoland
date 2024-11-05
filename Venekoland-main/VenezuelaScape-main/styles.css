@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Uncial Antiqua', serif; /* Estilo medieval */
+    overflow: hidden; /* Para que no haya scroll */
+}
+
+#background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('qQnJwE.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -1; /* Para que esté detrás del contenido */
+    animation: moveZoom 20s infinite linear;
+}
+
+@keyframes moveZoom {
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+    25% {
+        transform: scale(1.1) translate(-5%, -5%);
+    }
+    50% {
+        transform: scale(1.2) translate(-10%, -10%);
+    }
+    75% {
+        transform: scale(1.1) translate(-5%, -5%);
+    }
+    100% {
+        transform: scale(1) translate(0, 0);
+    }
+}
+
+header {
+    position: relative;
+    z-index: 1; /* Para estar por encima del fondo animado */
+    color: white;
+    text-align: center;
+    background: url('fondoletrastitulo.png') no-repeat center center;
+    background-size: contain; /* Ajusta el tamaño del marco */
+    padding: 40px 20px; /* Ajusta el padding para que se vea bien con el marco */
+}
+
+nav {
+    position: relative;
+    z-index: 1; /* Para estar por encima del fondo animado */
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px; /* Espacio entre el header y el nav */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px; /* Padding extra para que los enlaces sean más grandes */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+nav a:hover {
+    color: #ccc;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 160px); /* Ajusta la altura para incluir el header y nav */
+    margin-top: 20px; /* Espacio entre el nav y el main */
+}
+
+#play-button {
+    display: inline-block; /* Asegura que el enlace se comporte como un botón */
+    background-image: url('estiloboton.png'); /* Ruta de tu imagen */
+    background-size: cover; /* Ajusta el tamaño de la imagen para que cubra todo el botón */
+    background-position: center; /* Centra la imagen en el botón */
+    width: 300px; /* Ajusta el ancho del botón */
+    height: 150px; /* Ajusta la altura del botón */
+    text-align: center; /* Centra el texto en el botón */
+    line-height: 150px; /* Alinea verticalmente el texto */
+    color: white; /* Cambia el color del texto */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    font-size: 24px; /* Ajusta el tamaño del texto */
+    font-family: 'Uncial Antiqua', serif; /* Estilo medieval para el texto del botón */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 10px; /* Redondea las esquinas del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: opacity 0.3s ease; /* Suave transición al pasar el ratón */
+}
+
+#play-button:hover {
+    opacity: 0.8; /* Añade un efecto de opacidad al pasar el ratón */
+}
